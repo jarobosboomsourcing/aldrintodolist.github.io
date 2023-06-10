@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="prac.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="prac.js"></script>
+    <script src="popup.js"></script>
+    <script src="adding_class.js"></script>
+  </head>
+  <body onload="onload()">
+    <div id="main">
+      <div class="title">
+        <div>My To Do List</div>
+        <div id="displayDate">Display the date</div>
+        <div id="displayTime">Dsiplay the Time</div>
+      </div>
+      <div id="taskArea"></div>
+
+      <div id="btnArea">
+        <button id="addTodoBtn">Add Todo</button>
+
+        <button id="deleteBtn" onclick="deleteTask()" disabled>Delete</button>
+      </div>
+    </div>
+
+    <div id="overlay">
+      <div id="todoForm">
+        <div class="newTodo">New Todo</div>
+        <div class="inputTodoArea">
+          <input type="text" id="inputTodo" placeholder="New Todo" required />
+        </div>
+        <div class="todoBtnArea">
+          <button class="todoBtn">Add</button>
+          <button onclick="closePopupAddTodo()" class="todoBtn">Cancel</button>
+        </div>
+      </div>
+
+      <div id="editPopup">
+        <div class="editTodo">Edit Todo</div>
+        <div class="editTodoArea">
+          <input
+            type="text"
+            id="inputEditTodo"
+            placeholder="New Todo"
+            required
+          />
+        </div>
+        <div class="editBtnArea">
+          <button class="editTodoBtn">Update Task</button>
+          <button onclick="closePopup()" class="todoBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script></script>
+  </body>
+</html>

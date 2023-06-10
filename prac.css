@@ -1,0 +1,206 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    color: #272838;
+    background-color: #D1E8E3;
+  }
+  #main {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 500px;
+    background-color: #f3de8a;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .title {
+    flex: 0 0 auto;
+    background-color: #eb9486;
+    height: 50px;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  #taskArea {
+    flex: 1 1 auto;
+    overflow: auto;
+  }
+
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 60px;
+    width: auto;
+    margin: 10px 10px 0px 10px;
+    border-radius: 5px;
+    background-color: #f9f8f8;
+  }
+
+  .taskP {
+    padding: 5px 0px 0px 5px;
+  }
+
+  #taskCheckBox{
+    margin-right: 12px;
+  }
+
+  .editIcon {
+    margin-left: auto;
+    margin-right: 8px;
+  }
+
+  .editIcon:hover{
+    cursor: pointer;
+  }
+
+  #btnArea {
+    display: flex;
+    flex: 0 0 auto;
+    height: 60px;
+
+    align-items: center;
+    justify-content: right;
+  }
+
+
+  #addTodoBtn{
+    border: none;
+    padding: 10px 8px 10px 8px;
+    border-radius:15px ;
+    margin-right: 10px;
+    background-color: #7E7F9A;
+    color: #F9F8F8;
+  }
+
+  #deleteBtn{
+    border: none;
+    padding: 10px 8px 10px 8px;
+    border-radius:15px ;
+    margin-right: 10px;
+    background-color: #232323;
+    color: #F9F8F8;
+  }
+
+  #addTodoBtn:hover{
+    background-color: #232323;
+  }
+
+  button:disabled{
+    opacity: 0.5;
+    
+  }
+
+  /* popup form */
+
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 9999; /* Ensure the overlay appears on top */
+  }
+
+  #todoForm, #editPopup{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+   
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#f1f3f5;
+
+    height: 200px;
+    width: 400px;
+
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+   
+
+    border-radius: 8px;    
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+} 
+
+
+
+.newTodo, .editTodo{
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.inputTodoArea, .editTodoArea{
+  display: flex;
+  flex: 1 1 auto;
+  align-items:center ;
+  justify-content: center;
+
+  box-shadow:  0 -2px 2px rgba(0, 0, 0, 0.1); 
+}
+
+#inputTodo, #inputEditTodo{
+  height: 50px;
+  width: 300px;
+  
+  }
+
+  input:focus {
+    border: 2px solid rgb(240, 141, 75);
+    outline: none; /* Remove the default outline */
+    box-shadow: 0 0 5px rgba(233, 178, 60, 0.5); /* Apply a box shadow instead */
+  }
+
+.todoBtnArea, .editBtnArea{
+  display: flex;
+ 
+  justify-content: flex-start; 
+ 
+  width: 100%;
+  margin-top: 12px;
+  background-color: #c7370e;
+
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3), 0 -2px 2px rgba(0, 0, 0, 0.1);  
+}
+
+.todoBtn, .editTodoBtn{
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+
+  width: 100px;
+ 
+
+  background: linear-gradient(to right, rgb(29, 104, 202) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .3s ease-out;
+}
+
+.todoBtn:hover, .editTodoBtn:hover{
+  background-position: left bottom;
+}
+
+
