@@ -1,20 +1,25 @@
 function displayTime() {
-    let displayElement = document.getElementById("displayTime");
+  let displayElement = document.getElementById("displayTime");
 
-    setInterval(function() {
-      let currentTime = new Date();
-      let hours = currentTime.getHours();
-      let minutes = currentTime.getMinutes();
-      let seconds = currentTime.getSeconds();
-      let formattedTime = hours + ":" + padZero(minutes) + ":" + padZero(seconds);
+  setInterval(function() {
+    let currentTime = new Date();
+    let hours = currentTime.getHours();
+    let minutes = currentTime.getMinutes();
+    let amOrPm = hours >= 12 ? "PM" : "AM";
 
-      displayElement.innerHTML = formattedTime;
-    }, 1000);
-  }
+    // Convert hours to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Set 0 to 12 for midnight
 
-  function padZero(value) {
-    return value.toString().padStart(2, "0");
-  }
+    let formattedTime = hours + ":" + padZero(minutes) + " " + amOrPm;
+
+    displayElement.innerHTML = formattedTime;
+  }, 1000);
+}
+
+function padZero(value) {
+  return value.toString().padStart(2, "0");
+}
 
 function displayDate(){
     let displayElement = document.getElementById('displayDate');
