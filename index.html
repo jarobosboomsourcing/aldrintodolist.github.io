@@ -11,6 +11,7 @@
     </style>
 
     <link rel="stylesheet" href="prac.css" />
+    <link rel="stylesheet" href="menu.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -21,8 +22,17 @@
     <script src="adding_class.js"></script>
   </head>
   <body onload="onload()">
+    <div id="themeSelection" class="themeSelection">
+      <img src="images/menu.png" alt="hambuger menu" id="hamburerMenu" />
+      <div id="themeOptions" class="themeOptions">
+        <div id="theme1">Theme 1</div>
+        <div id="theme2">Theme 2</div>
+        <div id="theme3">Default</div>
+      </div>
+    </div>
+
     <div id="main">
-      <div class="title">
+      <div class="title" id="title">
         <div>My To Do List</div>
         <div id="displayDate">Display the date</div>
         <div id="displayTime">Display the Time</div>

@@ -17,7 +17,7 @@ class addingTask{
        taskDiv.className = "task";
    
        let taskPara = document.createElement("p");
-       
+        
        taskPara.textContent = todoTask;
        taskPara.className = "taskP";
    

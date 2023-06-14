@@ -131,3 +131,74 @@ function deleteTask() {
   let delBtn = document.getElementById('deleteBtn');
 delBtn.disabled = true;
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  let theme1 = document.getElementById('theme1');
+  let theme2 = document.getElementById('theme2');
+
+  let titleDiv = document.querySelector('.title');
+  let taskArea = document.getElementById('taskArea');
+  let btnArea = document.getElementById('btnArea');
+  
+  let body = document.body;
+  let delay = 500; // Delay in milliseconds
+
+  //default colors
+  const defaultTitleColor = "#c7370e";
+  const defaultBtnAreaColor = '#bb4424';
+  const defaultTaskAreaImage = "url('images/defaultTaskImage.jpg')" 
+
+  theme1.addEventListener('mouseover', function(){
+    body.style.opacity = 0; // Start with 0 opacity
+    body.style.transition = "opacity 1s ease-in-out"; // Transition for opacity
+   
+    setTimeout(function() {
+      body.style.backgroundImage = "url('images/theme1_background_image.jpg')";
+      taskArea.style.backgroundImage = "url('images/theme1_task_area_image.jpg')";
+      body.style.opacity = 1; // Fade in by setting opacity to 1
+      titleDiv.style.backgroundColor = "#0D1E40";
+      btnArea.style.backgroundColor = '#6077A6';
+
+    }, delay);
+  });
+
+  theme1.addEventListener('mouseout', function(){
+    default_design();
+  });
+
+  theme2.addEventListener('mouseover', function(){
+    body.style.opacity = 0; // Start with 0 opacity
+    body.style.transition = "opacity 1s ease-in-out"; // Transition for opacity
+   
+    setTimeout(function() {
+      body.style.backgroundImage = "url('images/theme2_background_image.jpg')";
+      taskArea.style.backgroundImage = "url('images/theme2_task_area_image.jpg')";
+      body.style.opacity = 1; // Fade in by setting opacity to 1
+      titleDiv.style.backgroundColor = "#D96666";
+      btnArea.style.backgroundColor = '#F29999';
+
+    }, delay);
+  });
+
+  theme2.addEventListener('mouseout', function(){
+    default_design();
+  });
+
+
+
+  function default_design(){
+    body.style.opacity = 0; // Start with 0 opacity
+      body.style.transition = "opacity 1s ease-in-out"; // Transition for opacity
+      setTimeout(function() {
+        body.style.backgroundImage = "url('images/default_background.jpg')";
+        taskArea.style.backgroundImage = defaultTaskAreaImage;
+        body.style.opacity = 1; // Fade in by setting opacity to 1
+        titleDiv.style.backgroundColor = defaultTitleColor;
+        btnArea.style.backgroundColor = defaultBtnAreaColor;
+      }, delay);
+  }
+
+});
+
+

@@ -5,20 +5,23 @@ body {
     justify-content: center;
     margin: 0;
     padding: 0;
-
-    color: #272838;
-    background: none;
-
+   
+    background-image: url('images/default_background.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
     font-family: Roboto, sans-serif;
   }
   #main {
     display: flex;
     flex-direction: column;
-    width: 600px;
-    height: 500px;
+    width: 500px;
+    height: 550px;
     background-color: #f3de8a;
-    border-radius: 0 0 10px 10px;
+
+    border-radius: 10px 10px 0 0;
+   
   }
 
   .title {
@@ -29,7 +32,7 @@ body {
 
     align-items: center;
     justify-content: space-between;
-    border-radius: 5px 5px 0 0;
+    border-radius: 10px 10px 0 0;
 
     padding-right: 5px;
     padding-left: 5px;
@@ -42,8 +45,8 @@ body {
     flex: 1 1 auto;
     overflow: auto;
     
-    background-image: url('haha.jpg');
-    background-size: cover;
+    background-image: url('images/defaultTaskImage.jpg');
+    background-size:cover;
     background-position: center;
   }
 
@@ -84,35 +87,56 @@ body {
     align-items: center;
     justify-content: right;
 
-    background-color: #c7370e;
+    background-color: #bb4424;
 
   }
 
 
   #addTodoBtn{
     border: none;
-    padding: 10px 8px 10px 8px;
-    border-radius:15px ;
+    padding: 10px 25px 10px 25px;
+   
     margin-right: 10px;
-    background-color: #7E7F9A;
-    color: #F9F8F8;
+    background-color: transparent;
+    color: white ;
+
+    font-size: 20px;
+
+    transition: color 0.3s ease;
+   
+  
   }
 
   #deleteBtn{
     border: none;
-    padding: 10px 8px 10px 8px;
+    padding: 10px 25px 10px 25px;
     border-radius:15px ;
     margin-right: 10px;
-    background-color: #232323;
-    color: #F9F8F8;
+    background-color: transparent;
+    
+    color: white;
+    font-size: 20px;
+
+    transition: color 0.3s ease;
+    
   }
 
   #addTodoBtn:hover{
-    background-color: #232323;
+    background-color: transparent;
+    color: #232323;
+    cursor: pointer;
+   
+  }
+
+
+  #deleteBtn:not(:disabled):hover { /* Add :not(:disabled) selector to exclude disabled state */
+    background-color: transparent;
+    color: #232323;
   }
 
   button:disabled{
-    opacity: 0.5;
+    background-color: transparent;
+    color: #232323;
     
   }
 
@@ -207,7 +231,7 @@ body {
   width: 100px;
  
 
-  background: linear-gradient(to right, rgb(29, 104, 202) 50%, transparent 50%);
+  background: linear-gradient(to right, rgb(60, 125, 209) 50%, transparent 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all .3s ease-out;
@@ -216,5 +240,3 @@ body {
 .todoBtn:hover, .editTodoBtn:hover{
   background-position: left bottom;
 }
-
-
